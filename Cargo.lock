@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "agave-feature-set"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "ahash",
  "solana-epoch-schedule",
@@ -18,7 +18,7 @@ dependencies = [
 [[package]]
 name = "agave-syscalls"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "bincode",
  "libsecp256k1",
@@ -1887,7 +1887,7 @@ dependencies = [
 [[package]]
 name = "solana-bpf-loader-program"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "agave-syscalls",
  "bincode",
@@ -1952,7 +1952,7 @@ dependencies = [
 [[package]]
 name = "solana-curve25519"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "bytemuck",
  "bytemuck_derive",
@@ -2216,7 +2216,7 @@ dependencies = [
 [[package]]
 name = "solana-poseidon"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "ark-bn254 0.4.0",
  "ark-bn254 0.5.0",
@@ -2265,7 +2265,7 @@ dependencies = [
 [[package]]
 name = "solana-program-runtime"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "base64 0.22.1",
  "bincode",
@@ -2346,6 +2346,7 @@ checksum = "dcf09694a0fc14e5ffb18f9b7b7c0f15ecb6eac5b5610bf76a1853459d19daf9"
 [[package]]
 name = "solana-sbpf"
 version = "0.13.1"
+source = "git+https://github.com/blueshift-gg/solana-sbpf?branch=u128-intrinsics#45a728904fb74ccacaffb0c605a0f08132f0b573"
 dependencies = [
  "byteorder",
  "combine",
@@ -2480,7 +2481,7 @@ dependencies = [
 [[package]]
 name = "solana-svm-callback"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "solana-account",
  "solana-clock",
@@ -2491,12 +2492,12 @@ dependencies = [
 [[package]]
 name = "solana-svm-feature-set"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 
 [[package]]
 name = "solana-svm-log-collector"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "log",
 ]
@@ -2504,12 +2505,12 @@ dependencies = [
 [[package]]
 name = "solana-svm-measure"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 
 [[package]]
 name = "solana-svm-timings"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "eager",
  "enum-iterator",
@@ -2519,7 +2520,7 @@ dependencies = [
 [[package]]
 name = "solana-svm-transaction"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "solana-hash 3.1.0",
  "solana-message",
@@ -2532,7 +2533,7 @@ dependencies = [
 [[package]]
 name = "solana-svm-type-overrides"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "rand 0.8.5",
 ]
@@ -2555,7 +2556,7 @@ dependencies = [
 [[package]]
 name = "solana-system-program"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "bincode",
  "log",
@@ -2639,7 +2640,7 @@ dependencies = [
 [[package]]
 name = "solana-transaction-context"
 version = "3.1.5"
-source = "git+https://github.com/blueshift-gg/agave?branch=v3.1-blueshift#67963d68232074824fe0deb2476e9fd209d88f1d"
+source = "git+https://github.com/blueshift-gg/agave?branch=u128-intrinsics#67963d68232074824fe0deb2476e9fd209d88f1d"
 dependencies = [
  "bincode",
  "qualifier_attr",
@@ -2800,6 +2801,7 @@ dependencies = [
  "mollusk-svm",
  "pinocchio",
  "solana-instruction",
+ "solana-program-error",
 ]
 
 [[package]]
