@@ -1,4 +1,7 @@
-use pinocchio::{log::sol_log_data, program_error::ProgramError};
+use pinocchio::program_error::ProgramError;
+#[cfg(feature = "log")]
+use pinocchio::log::sol_log_data;
+
 use core::mem::MaybeUninit;
 use std::u128;
 
@@ -32,9 +35,9 @@ pub fn sol_u128_mul(a: u128, b: u128) -> (u128, u128) {
 }
 
 #[no_mangle]
-unsafe extern "C" fn entrypoint(_ptr: *mut u8) -> u64 {
-    let x = *{ _ptr.add(16) as *const u128 };
-    let y = sol_u128_mul(u128::MAX, x);
+unsafe extern "C" fn entrypoint(ptr: *mut u8) -> u64 {
+    let y = sol_u128_mul(u128::MAX, unsafe { *(ptr.add(16) as *const u128) } );
+    #[cfg(feature = "log")]
     sol_log_data(&[&y.0.to_le_bytes(), &y.1.to_le_bytes()]);
     if y.1 != 0 {
         return ProgramError::ArithmeticOverflow.into();

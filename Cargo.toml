@@ -6,6 +6,9 @@ edition = "2021"
 [lib]
 crate-type = ["cdylib"]
 
+[features]
+log = []
+
 [dependencies]
 pinocchio = "0.9.2"
 
