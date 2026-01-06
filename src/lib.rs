@@ -1,9 +1,26 @@
-use pinocchio::program_error::ProgramError;
+#![cfg_attr(any(target_arch = "bpf", target_os = "solana"), no_std)]
+
+#[cfg(any(target_arch = "bpf", target_os = "solana"))]
+#[panic_handler]
+fn panic(_: &core::panic::PanicInfo) -> ! {
+    unsafe { core::hint::unreachable_unchecked() }
+}
+
 #[cfg(feature = "log")]
-use pinocchio::log::sol_log_data;
+extern "C" {
+    fn sol_log_data(data: *const u8, data_len: u64);
+}
+
+#[cfg(feature = "log")]
+fn log(data: &[&[u8]]) {
+    unsafe {
+        sol_log_data(data as *const _ as *const u8, data.len() as u64);
+    }
+}
 
 use core::mem::MaybeUninit;
-use std::u128;
+
+use solana_program_error::ProgramError;
 
 #[repr(C)]
 struct U128MulParams {
@@ -38,7 +55,7 @@ pub fn sol_u128_mul(a: u128, b: u128) -> (u128, u128) {
 unsafe extern "C" fn entrypoint(ptr: *mut u8) -> u64 {
     let y = sol_u128_mul(u128::MAX, unsafe { *(ptr.add(16) as *const u128) } );
     #[cfg(feature = "log")]
-    sol_log_data(&[&y.0.to_le_bytes(), &y.1.to_le_bytes()]);
+    log(&[&y.0.to_le_bytes(), &y.1.to_le_bytes()]);
     if y.1 != 0 {
         return ProgramError::ArithmeticOverflow.into();
     }
