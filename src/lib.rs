@@ -38,9 +38,6 @@ unsafe extern "C" fn entrypoint(ptr: *mut u8) -> u64 {
     sol_multi3(result.as_mut_ptr(), u128::MAX, unsafe { *(ptr.add(0x0010) as *const u128) } );
     #[cfg(feature = "log")]
     log(&[&result.assume_init().to_le_bytes()]);
-    if unsafe { result.assume_init() } == 0 {
-        return ProgramError::ArithmeticOverflow.into();
-    }
     0
 }
 
