@@ -49,6 +49,7 @@ mod tests {
 
     #[test]
     fn test() {
+            // let mollusk = Mollusk::new(&PROGRAM_ID.into(), "deploy/libupstream_u128_test1");
         let mollusk = Mollusk::new(&PROGRAM_ID.into(), "target/deploy/u128_intrinsics");
 
         let instruction = solana_instruction::Instruction {

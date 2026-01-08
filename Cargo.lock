@@ -2340,6 +2340,7 @@ checksum = "dcf09694a0fc14e5ffb18f9b7b7c0f15ecb6eac5b5610bf76a1853459d19daf9"
 [[package]]
 name = "solana-sbpf"
 version = "0.13.1"
+source = "git+https://github.com/blueshift-gg/solana-sbpf?branch=u128-intrinsics#faa6d61412cd4267558a158a0a69e0d44f23b2d8"
 dependencies = [
  "byteorder",
  "combine",
